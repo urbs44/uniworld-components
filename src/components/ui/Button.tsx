@@ -15,6 +15,7 @@ const buttonVariants = cva(
         ghost: 'text-uniworld-blue hover:bg-uniworld-light-gray',
         link: 'text-uniworld-blue underline-offset-4 hover:underline p-0 h-auto',
         danger: 'bg-uniworld-red text-uniworld-white hover:bg-uniworld-red/90 shadow-sm',
+        red: 'bg-uniworld-dark-red text-uniworld-white hover:bg-uniworld-dark-red-hover shadow-sm',
         yellow: 'bg-uniworld-yellow text-uniworld-blue hover:bg-uniworld-yellow/90 shadow-sm',
         light: 'bg-uniworld-light-blue text-uniworld-blue hover:bg-uniworld-light-blue/80 shadow-sm',
       },
@@ -103,4 +104,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = 'Button';
 
-export { Button, buttonVariants }; 
+export { Button, buttonVariants };

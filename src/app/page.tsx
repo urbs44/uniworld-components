@@ -49,6 +49,11 @@ export default function Home() {
             description="API references, usage guidelines, and component documentation"
             href="/docs"
           />
+          <ComponentCard 
+            title="Examples" 
+            description="Live examples and demonstrations of component usage"
+            href="/examples"
+          />
         </div>
       </div>
     </main>
@@ -74,4 +79,4 @@ function ComponentCard({ title, description, href }: { title: string; descriptio
       </div>
     </Link>
   )
-} 
+}
