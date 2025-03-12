@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --uniworld-blue: 0 51 102; /* #003366 */
+    --uniworld-gold: 212 175 55; /* #D4AF37 */
+    --uniworld-red: 139 0 0; /* #8B0000 */
+    --uniworld-gray: 245 245 245; /* #F5F5F5 */
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-uniworld-blue text-white hover:bg-blue-800;
+  }
+  
+  .btn-secondary {
+    @apply bg-uniworld-gold text-white hover:bg-yellow-600;
+  }
+  
+  .btn-outline {
+    @apply border border-uniworld-blue text-uniworld-blue hover:bg-uniworld-blue hover:text-white;
+  }
+} 
