@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
 import Container from "@/components/layout/Container";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import Grid from "@/components/layout/Grid";
@@ -234,9 +237,11 @@ export default function LayoutComponentsDocumentation() {
             <p className="mb-6">
               See these components in action in our examples section.
             </p>
-            <Button variant="primary" onClick={() => window.location.href = '/examples/layout-components'}>
-              View Layout Component Examples
-            </Button>
+            <Link href="/examples/layout-components">
+              <Button variant="primary">
+                View Layout Component Examples
+              </Button>
+            </Link>
           </div>
         </Container>
       </SectionWrapper>
