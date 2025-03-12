@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font Declarations - Using Google Fonts directly */
+@font-face {
+  font-family: 'Libel Suit Regular';
+  src: local('Playfair Display'), local('PlayfairDisplay-Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libel Suit Bold';
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Questa Sans Regular';
+  src: local('Montserrat'), local('Montserrat-Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Questa Sans Bold';
+  src: local('Montserrat Bold'), local('Montserrat-Bold');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --uniworld-blue: 0 51 102; /* #003366 */

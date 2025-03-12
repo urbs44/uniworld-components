@@ -1,10 +1,109 @@
-# Uniworld Components
+# 🚀 Uniworld Next.js Component Library
 
-A modern component library built with Next.js, TypeScript, and Tailwind CSS for the next version of the uniworld.com website.
+A comprehensive, modular, and reusable component system built with Next.js, TypeScript, and Tailwind CSS, designed to enhance maintainability and consistency across the uniworld.com website.
 
-## Overview
+## 🎯 Project Overview
 
-This repository contains reusable UI components, layouts, and utilities designed specifically for Uniworld's digital presence. The components are built with accessibility, performance, and brand consistency in mind.
+This repository is a Next.js project using TypeScript and Tailwind CSS. The goal is to build a reusable, modular component system for the Uniworld website.
+
+## 📚 Project Structure
+
+- `/src/components` → Stores all reusable UI components
+
+Organized by category:
+
+- `components/ui/` → Buttons, forms, inputs
+- `components/layout/` → Grids, sections, containers
+- `components/navigation/` → Headers, footers, breadcrumbs
+- `components/booking/` → Search, booking flows, cabin selection
+- `components/content/` → Carousels, accordions, testimonials
+- `components/utility/` → Loaders, pagination, notifications
+- `components/docs/` → API references & guidelines
+
+- `/src/app` → Site pages using components
+- `/src/styles` → Global styles
+- `/src/lib` → Helper functions/hooks
+
+## 🎯 Component Development Guidelines
+
+### 1️⃣ Start with Base Components
+
+Each category should have core components first.
+
+Example: Card Component (components/ui/Card.tsx)
+
+```tsx
+import React from "react";
+
+interface CardProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, description, image }) => {
+  return (
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
+```
+
+All variations of a component should extend the base component.
+
+Example: CardFeatured.tsx, CardWithButton.tsx
+
+### 2️⃣ Keep Carousels, Tabs, & Accordions Consistent
+
+Use a single core implementation for all carousels, tabs, and accordions.
+
+Example: components/content/Carousel.tsx
+
+Reuse across different sections instead of duplicating logic.
+
+## 📌 Guiding Principles
+
+- Use Tailwind for styling.
+- Prioritize reusability—avoid duplicate code.
+- Follow Atomic Design principles to maintain scalability.
+- Ensure accessibility in all components.
+- Document components thoroughly.
+
+## 🛠️ Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start the production server
+npm run start
+```
+
+## 🧪 Component Testing
+
+Each component should have appropriate tests to ensure functionality and accessibility.
+
+```bash
+# Run tests
+npm test
+```
+
+## 📖 Documentation
+
+Visit the [documentation site](/docs) to see examples and usage guidelines for all components.
 
 ## Technology Stack
 
